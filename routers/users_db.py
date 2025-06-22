@@ -8,7 +8,7 @@ from bson import ObjectId
 
 router = APIRouter(prefix="/userdb", 
                    tags=["userdb"],
-                   responses={status.HTTP_404_NOT_FOUND: {"message":"No encontrado"}})
+                   responses={status.HTTP_404_NOT_FOUND: {"message":"Not found"}})
 
 @router.get("/", response_model=list[User])
 async def users():
@@ -29,7 +29,7 @@ async def user(id: str):
 async def user(user: User):
     if type(search_user("email", user.email)) == User:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND, detail= "El usuario ya existe")
+            status_code=status.HTTP_404_NOT_FOUND, detail= "User already exists")
     
 # This dict is because I want to convert the user in a JSON which is a dictionary
     user_dict = dict(user)
@@ -50,7 +50,7 @@ async def user(user:User):
         
         db_client.users.find_one_and_replace({"_id": ObjectId(user.id)}, user_dict)
     except:
-        return {"error":"No se ha actualizado el usuario"}
+        return {"error":"User not updated"}
 
     return search_user("_id", ObjectId(user.id))
 
@@ -60,7 +60,7 @@ async def user(id:str):
     found = db_client.users.find_one_and_delete({"_id": ObjectId(id)})
 
     if not found:
-        return {"error": "No se ha emilinado el usuario"}
+        return {"error": "User not deleted"}
     
 # This function allows to search if the user already exists (username, email, etc). Search is in the database
 def search_user(field: str, key):
@@ -69,5 +69,5 @@ def search_user(field: str, key):
         user = db_client.users.find_one({field: key})
         return User(**user_schema(user))
     except:
-        return {"error":"No se ha encontrado el usuario"}
+        return {"error":"User not found"}
                 
