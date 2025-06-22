@@ -37,7 +37,7 @@ class UserDB(User):
 
 users_db = {
     "eduhurtado":{
-        "username":"edhurtado",
+        "username":"eduhurtado",
         "full_name":"Eduardo Hurtado",
         "email":"ehurtado@gmail.com",
         "disabled":False,
@@ -45,7 +45,7 @@ users_db = {
         "password": "$2a$12$9tDwhJYvEPl.gMWVHUHaS.2wf37nz2nTeE5Jok8dubMxCTo6osG5O" 
     },
 
-     "edhl":{
+     "eduhl":{
         "username":"eduhl",
         "full_name":"Edu Hurtado",
         "email":"eduhl@hotmail.com",
