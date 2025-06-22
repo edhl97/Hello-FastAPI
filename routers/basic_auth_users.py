@@ -30,14 +30,14 @@ class UserDB(User):
 # Users that would be theoretically in the database
 users_db = {
     "eduhurtado":{
-        "username":"edhurtado",
+        "username":"eduhurtado",
         "full_name":"Eduardo Hurtado",
         "email":"ehurtado@gmail.com",
         "disabled":False,
         "password": "123456" # Passwords are normally encrypted for safety. See JWT file
     },
 
-     "edhl":{
+     "eduhl":{
         "username":"eduhl",
         "full_name":"Edu Hurtado",
         "email":"eduhl@hotmail.com",
