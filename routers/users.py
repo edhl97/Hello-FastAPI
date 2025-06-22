@@ -30,7 +30,7 @@ def search_user(id:int):
     try:
         return list(users)[0]
     except:
-        return {"error":"No se ha encontrado el usuario"}
+        return {"error":"User not found"}
 #Path
 @router.get("/user/{id}")
 async def user(id: int):
@@ -48,7 +48,7 @@ async def user(id: int):
 @router.post("/user/", response_model=User, status_code=201)
 async def user(user:User):
     if type(search_user(user.id)) ==User:
-        raise HTTPException(status_code=404, detail="El usuario ya existe")
+        raise HTTPException(status_code=404, detail="User already exists")
     else: 
         users_list.append(user)
         return user
@@ -62,7 +62,7 @@ async def user(user:User):
                 users_list[index] = user
                 found =True
     if not found:
-        return {"error":"No se ha actualizado el usuario"}
+        return {"error":"User not updated"}
     else:
         return user
 
@@ -75,6 +75,6 @@ async def user(id:int):
                 del users_list[index]
                 found =True
     if not found:
-        return {"error":"No se ha aliminado el usuario"}
+        return {"error":"User not deleted"}
                 
    
