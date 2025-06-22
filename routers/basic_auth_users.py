@@ -29,8 +29,8 @@ class UserDB(User):
 
 # Users that would be theoretically in the database
 users_db = {
-    "ehurtado":{
-        "username":"ehurtado",
+    "eduhurtado":{
+        "username":"edhurtado",
         "full_name":"Eduardo Hurtado",
         "email":"ehurtado@gmail.com",
         "disabled":False,
@@ -38,8 +38,8 @@ users_db = {
     },
 
      "edhl":{
-        "username":"edhl",
-        "full_name":"Edu Hurtado Lopez",
+        "username":"eduhl",
+        "full_name":"Edu Hurtado",
         "email":"eduhl@hotmail.com",
         "disabled":True,
         "password": "654321" # Passwords are normally encrypted for safety. See JWT file
