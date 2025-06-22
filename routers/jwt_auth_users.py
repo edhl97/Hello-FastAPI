@@ -37,7 +37,7 @@ class UserDB(User):
 
 users_db = {
     "eduhurtado":{
-        "username":"ehurtado",
+        "username":"edhurtado",
         "full_name":"Eduardo Hurtado",
         "email":"ehurtado@gmail.com",
         "disabled":False,
@@ -45,10 +45,10 @@ users_db = {
         "password": "$2a$12$9tDwhJYvEPl.gMWVHUHaS.2wf37nz2nTeE5Jok8dubMxCTo6osG5O" 
     },
 
-     "eduhl":{
+     "edhl":{
         "username":"eduhl",
         "full_name":"Edu Hurtado",
-        "email":"edhl@hotmail.com",
+        "email":"eduhl@hotmail.com",
         "disabled":True,
         # Encrypt with an online bcrypt hash generator. Each time you encrypt is different
         "password": "$2a$12$nFs.38ST6i/k.KuOZF/L0uBJMPvCoiBXKMMXhzalrFHrqC/QZOxQG" 
