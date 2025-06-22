@@ -36,19 +36,19 @@ class UserDB(User):
 
 
 users_db = {
-    "mouredev":{
-        "username":"mouredev",
-        "full_name":"Brais Moure",
-        "email":"braismoure@mouredev.com",
+    "eduhurtado":{
+        "username":"ehurtado",
+        "full_name":"Eduardo Hurtado",
+        "email":"ehurtado@gmail.com",
         "disabled":False,
         # Encrypt with an online bcrypt hash generator. Each time you encrypt is different
         "password": "$2a$12$9tDwhJYvEPl.gMWVHUHaS.2wf37nz2nTeE5Jok8dubMxCTo6osG5O" 
     },
 
-     "mouredev2":{
-        "username":"mouredev2",
-        "full_name":"Brais Moure 2",
-        "email":"braismoure2@mouredev.com",
+     "eduhl":{
+        "username":"eduhl",
+        "full_name":"Edu Hurtado",
+        "email":"edhl@hotmail.com",
         "disabled":True,
         # Encrypt with an online bcrypt hash generator. Each time you encrypt is different
         "password": "$2a$12$nFs.38ST6i/k.KuOZF/L0uBJMPvCoiBXKMMXhzalrFHrqC/QZOxQG" 
